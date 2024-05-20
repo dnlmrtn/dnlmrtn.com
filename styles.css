@@ -1,8 +1,19 @@
+@import './fonts/fonts.css'
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    height: 100vh;
-    background-color: #f4f4f4;
+  font-family: Neue Montreal;
+  margin: 0;
+  height: 100vh;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content:center;
+}
+
+header {
+  margin-top: calc(33vh - 135px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 p {
@@ -10,49 +21,54 @@ p {
   font-weight: normal;
 }
 
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.container {
+  width: 90%; /* Use percentage for a more flexible layout */
+  max-width: 900px; /* Set a maximum width for large screens */
+  margin: 0 auto;
+}
+
 .carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
-    flex: 0 0 auto;
-    width: calc(100% / 4);
-    box-sizing: border-box;
-    padding: 10px;
+  flex: 0 0 auto;
+  width: calc(100% / 3);
+  box-sizing: border-box;
+  padding-right: 10px;
+  position: relative;
 }
 
 .carousel-item img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Allow image to scale within the carousel item */
+  max-height: 100%; /* Set a maximum height for consistency */
 }
 
 .prev {
-    left: 10px;
+  left: 10px;
 }
-
 .next {
-    right: 10px;
+  right: 10px;
 }
 

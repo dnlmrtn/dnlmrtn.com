@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.next');
 
     const itemWidth = items[0].offsetWidth;
-    const visibleItems = 4;
+    const visibleItems = 3;
     let index = 0;
 
     function updateCarousel() {
