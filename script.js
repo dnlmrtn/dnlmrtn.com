@@ -1,35 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.querySelector('.carousel-inner');
-    const items = document.querySelectorAll('.carousel-item');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
+  const carousels = document.querySelectorAll('.carousel');
 
-    const itemWidth = items[0].offsetWidth;
-    const visibleItems = 3;
+  carousels.forEach((carousel) => {
+    const carouselInner = carousel.querySelector('.carousel-inner');
+    const items = carouselInner.querySelectorAll('.carousel-item');
+    const prevButton = carousel.previousElementSibling.querySelector('.prev');
+    const nextButton = carousel.previousElementSibling.querySelector('.next');
+
     let index = 0;
 
+    function getVisibleItems() {
+      return window.innerWidth <= 768 ? 1 : 3;
+    }
+
+    let visibleItems = getVisibleItems();
+
     function updateCarousel() {
-        carousel.style.transition = 'transform 0.5s ease-in-out';
-        carousel.style.transform = `translateX(-${index * itemWidth}px)`;
+      const itemWidth = items[0].offsetWidth;
+      carouselInner.style.transition = 'transform 0.5s ease-in-out';
+      carouselInner.style.transform = `translateX(-${index * itemWidth}px)`;
     }
 
     nextButton.addEventListener('click', () => {
-        if (index < items.length - visibleItems) {
-            index++;
-            updateCarousel();
-        }
+      if (index < items.length - visibleItems) {
+        index++;
+        updateCarousel();
+      }
     });
 
     prevButton.addEventListener('click', () => {
-        if (index > 0) {
-            index--;
-            updateCarousel();
-        }
+      if (index > 0) {
+        index--;
+        updateCarousel();
+      }
     });
 
-    // Reset transition after animation
-    carousel.addEventListener('transitionend', () => {
-        carousel.style.transition = '';
+    window.addEventListener('resize', () => {
+      visibleItems = getVisibleItems();
+      updateCarousel();
     });
+
+    // Initial update
+    updateCarousel();
+  });
 });
 

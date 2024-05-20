@@ -6,11 +6,11 @@ body {
   height: 100vh;
   background-color: #f4f4f4;
   display: flex;
-  justify-content:center;
+  justify-content: center;
 }
 
 header {
-  margin-top: calc(33vh - 135px);
+  margin-top: calc(22vh);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,38 +21,54 @@ p {
   font-weight: normal;
 }
 
-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+.container {
+  width: 90%;
+  max-width: 900px; 
+  margin: 0 auto;
 }
 
-.container {
-  width: 90%; /* Use percentage for a more flexible layout */
-  max-width: 900px; /* Set a maximum width for large screens */
-  margin: 0 auto;
+.header-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #808080;
+  margin-right: 3px;
+}
+
+.header-controls button:hover {
+  color: #000000;
 }
 
 .carousel {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   overflow: hidden;
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 10px;
+}
+
 .carousel-inner {
   display: flex;
+  align-items: left;
   transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
   flex: 0 0 auto;
   width: calc(100% / 3);
+  min-width: 100px;
   box-sizing: border-box;
   padding-right: 10px;
   position: relative;
@@ -61,14 +77,21 @@ button {
 .carousel-item img {
   width: 100%;
   height: auto;
-  max-width: 100%; /* Allow image to scale within the carousel item */
-  max-height: 100%; /* Set a maximum height for consistency */
+  max-width: 100%; 
+  max-height: 100%;
+  display: block;
+  border-radius: 8px;
 }
-
-.prev {
+.overlay-text {
+  position: absolute;
+  top: 10px; 
   left: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff; 
+  padding: 5px 10px; 
+  border-radius: 3px;
+  font-size: 16px;
+  backdrop-filter: blur(9px); /* Adjust the blur intensity as needed */
+  z-index: 999;
+  width: auto;
 }
-.next {
-  right: 10px;
-}
-
