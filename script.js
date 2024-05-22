@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Carousel Logic
   const carousels = document.querySelectorAll('.carousel');
 
   carousels.forEach((carousel) => {
@@ -42,6 +43,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial update
     updateCarousel();
+  });
+
+  // Popup Logic
+  const popups = document.querySelectorAll('.popup');
+  const photoButtons = document.querySelectorAll('.photo-button');
+
+  // Add click event listener to each photo button
+  photoButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      // Get the associated popup ID from the button's data attribute
+      const popupId = button.dataset.popupId;
+
+      // Find the corresponding popup element
+      const popup = document.querySelector(`[data-popup-id="${popupId}"]`);
+
+      // Show the popup
+      popup.style.display = 'flex';
+      document.body.classList.add('blurred');
+    });
+  });
+
+  // Add event listener to the close button to hide the popup
+  popups.forEach((popup) => {
+    const closeButton = popup.querySelector('.close');
+    closeButton.addEventListener('click', () => {
+      popup.style.display = 'none';
+      document.body.classList.remove('blurred');
+    });
+  });
+
+  // Add event listener to hide the popup when clicking outside it
+  window.addEventListener('click', (event) => {
+    popups.forEach((popup) => {
+      if (event.target === popup) {
+        popup.style.display = 'none';
+        document.body.classList.remove('blurred');
+      }
+    });
   });
 });
 

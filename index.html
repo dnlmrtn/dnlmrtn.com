@@ -3,78 +3,109 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Static Site</title>
+    <title>dnlmrtn</title>
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+<body>
+
+<div class="popup-container" id="popup1">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closePopup('popup1')">&times;</span>
+    <h2>Full Stack Dev</h2>
+    <h3> RecessD Automation </h3>
+    <p>Popup 2 content.</p>
+  </div>
+</div>
+
+<div class="popup-container" id="popup2">
+  <div class="popup-content">
+    <span class="popup-close" onclick="closePopup('popup2')">X</span>
+    <h2>Popup 2</h2>
+    <p>This is the content of Popup 2.</p>
+    <p>It can contain any HTML content.</p>
+  </div>
+</div>
+
+
     <div class="container">
       <header>
-        <h1>danielm.ca </h1>
-        <p> build good things, learn good skills <p>
+        <h1>dnlmrtn</h1>
+        <p> build something, learn something </p>
       </header>
       <section id="projects">
         <div class="header-controls">
-          <h2>Projects</h2>
-        <button class="prev"> < </button>
-        <button class="next"> > </button>
+          <h2>Work</h2>
+          <button class="prev"> < </button>
+          <button class="next"> > </button>
         </div>
-            <div class="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item">
-                  <img src="img/placeholder.jpg" alt="Project 1">
-                </div> 
-                <div class="carousel-item">
-                  <img src="img/placeholder.jpg"  alt="Project 2">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/placeholder.jpg"  alt="Project 3">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/placeholder.jpg"  alt="Project 3">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/placeholder.jpg"  alt="Project 3">
-                </div>
-              </div>
+        <div class="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item">
+              <img src="img/iot3.jpeg" alt="Project 1" onclick="openPopup('popup1')" style="cursor: pointer; margin-right: 20px;">
+              <div class="overlay-text">Internet of Things</div>
+            </div>
+          <div class="carousel-item">
+            <img src="img/cf.jpg"  alt="Project 2">
+            <div class="overlay-text">Composite Manufacturing</div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/df3.png"  alt="Project 3">
+            <div class="overlay-text">Drone Photography</div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/tutor2.jpeg" alt="Project 3">
+            <div class="overlay-text">Tutoring</div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/ls2.jpeg"  alt="Project 3">
+            <div class="overlay-text">Landscaping</div>
+          </div>
+        </div>
       </section>
-
       <section id="projects">
         <div class="header-controls">
-          <h2>Work</h2>
-        <button class="prev"> < </button>
-        <button class="next"> > </button>
+          <h2>Projects</h2>
+          <button class="prev"> < </button>
+          <button class="next"> > </button>
         </div>
-            <div class="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item">
-                  <img src="img/iot.jpeg" alt="Project 1">
-                  <div class="overlay-text">Internet of Things</div>
-                </div> 
-                <div class="carousel-item">
-                  <img src="img/cf.jpg"  alt="Project 2">
-                  <div class="overlay-text">Carbon Fibre Manufacture</div>
-                </div>
-                <div class="carousel-item">
-                  <img src="img/df.png"  alt="Project 3">
-                  <div class="overlay-text">Drone Photography</div>
-                </div>
-                <div class="carousel-item">
-                  <img src="img/tutor.jpeg"  alt="Project 3">
-                  <div class="overlay-text">Tutoring</div>
-                </div>
-                <div class="carousel-item">
-                  <img src="img/ls.jpeg"  alt="Project 3">
-                  <div class="overlay-text">Landscaping</div>
-                </div>
-              </div>
+        <div class="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item">
+              <img src="img/thesis1.jpeg" alt="RL for Insulin Dosing" onclick="openPopup('popup1')" style="cursor: pointer; margin-right: 20px;">
+              <div class="overlay-text">Thesis: RL Applications to Diabetes </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/bci2.jpeg" alt="RL for Insulin Dosing" onclick="openPopup('popup1')" style="cursor: pointer; margin-right: 20px;">
+              <div class="overlay-text">Brain Computer Interface </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/relectric.png" alt="RL for Insulin Dosing" onclick="openPopup('popup1')" style="cursor: pointer; margin-right: 20px;">
+              <div class="overlay-text">EV Go Kart Rebuild </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/eyetrack.jpeg" alt="Eye tracking webcam ML" onclick="openPopup('popup1')" style="cursor: pointer; margin-right: 20px;">
+              <div class="overlay-text">Eye tracking ML Model </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/placeholder.jpg"  alt="Project 3">
+            </div>
+          </div>
       </section>
-      
-
       <footer>
-        <p>&copy; 2024 I have no copyright</p>
+        <p>https://github.com/dnlmrtn/folio</p>
       </footer>
         </div>
+
+
+        <script src="script.js"></script>
   </body>
 </html>
-<script src="script.js"></script>
-
+<script>
+  function openPopup(popupId) {
+    document.getElementById(popupId).style.display = "flex";
+  }
+  
+  function closePopup(popupId) {
+    document.getElementById(popupId).style.display = "none";
+  }
+</script>
