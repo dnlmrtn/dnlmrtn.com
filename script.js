@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Carousel Logic
+  // -----Carousel Logic -----
   const carousels = document.querySelectorAll('.carousel');
 
   carousels.forEach((carousel) => {
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCarousel();
   });
 
-  // Popup Logic
+  // ----- Popup Logic -----
   const popups = document.querySelectorAll('.popup');
   const photoButtons = document.querySelectorAll('.photo-button');
 
@@ -70,16 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     closeButton.addEventListener('click', () => {
       popup.style.display = 'none';
       document.body.classList.remove('blurred');
-    });
-  });
-
-  // Add event listener to hide the popup when clicking outside it
-  window.addEventListener('click', (event) => {
-    popups.forEach((popup) => {
-      if (event.target === popup) {
-        popup.style.display = 'none';
-        document.body.classList.remove('blurred');
-      }
     });
   });
 });

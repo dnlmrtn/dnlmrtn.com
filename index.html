@@ -5,42 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>dnlmrtn</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous"> 
  </head>
  <body>
-
-  <div class="popup-container" id="popup1">
-   <div class="popup-content">
-    <span class="popup-close" onclick="closePopup('popup1')">&times;</span>
-    <h2>Full Stack Dev</h2>
-    <p> TLDR: Working on making our buildings greener with AI.</p>
-    <p>RecessD is a startup focused on minimizing consumption of commercial buildings.</p>
-    <p>My work focuses on implementing closed loop RL minimizing energy consumption of industrial IoT systems. HVAC, boiler, and irrigation systems provide unique opportunity for savings if properly controlled. </p>
-   </div>
-  </div>
-
-  <div class="popup-container" id="popup2">
-   <div class="popup-content">
-    <span class="popup-close" onclick="closePopup('popup2')">&times</span>
-    <h2>Mech Eng. Intership</h2>
-    <p>TLDR: Designed assembly line components for aerospace-grade carbon fiber parts</p>
-    <p>Internship at Formula Solutions Inc. PLC Programming for assembly line components providing 1.8x reduction in production time for a given part. Designed 3D printed fixtures for pneumatic shears, drill press. Supervised installation of equipment on the factory floor.</p>
-   </div>
-  </div>
-
-
-  <div class="popup-container" id="popup3">
-   <div class="popup-content">
-    <span class="popup-close" onclick="closePopup('popup3')">&times</span>
-    <h2>Drone Photography Freelance</h2>
-    <p>Freelance work capturing photo/video for residential and commercial clients. Documenting renovations, real estate listings, and personal showcases. Creative direction in filming/editing process. Project management and outreach to clients.
-    </p>
-   </div>
-  </div>
 
   <div class="container">
    <header>
     <h1>dnlmrtn</h1>
     <p> build something, learn something </p>
+    <div class="icons"> 
+     <a href="https://github.com/dnlmrtn" target="_blank">
+      <i class="fa fa-github icon"  style="font-size:24px"></i>
+     </a>
+     <a href="https://linkedin.com/in/daniel-martin-0787" target="_blank">
+      <i class="fa fa-linkedin icon" style="font-size:24px"></i>
+     </a>
+     <a href="https://x.com/cautiousfool" target="_blank">
+      <i class="fa-brands fa-x-twitter" style="font-size:24px"></i>
+     </a>
+    </div>
    </header>
    <section id="projects">
     <div class="header-controls">
@@ -51,23 +35,23 @@
     <div class="carousel">
      <div class="carousel-inner">
       <div class="carousel-item">
-       <img src="img/iot3.jpeg" alt="Project 1" onclick="openPopup('popup1')" style="cursor: pointer; margin-right: 20px;">
+       <img src="media/iot5.png" alt="Internet of Things" onclick="openPopup('work-popup1')" style="cursor: pointer; margin-right: 20px;">
        <div class="overlay-text">Internet of Things</div>
       </div>
       <div class="carousel-item">
-       <img src="img/cf.jpg"  alt="Project 2" onclick="openPopup('popup2')" style="cursor: pointer; margin-right: 20px;">
+       <img src="media/cf.jpg"  alt="Composite Manufacturing" onclick="openPopup('work-popup2')" style="cursor: pointer; margin-right: 20px;">
        <div class="overlay-text">Composite Manufacturing</div>
       </div>
       <div class="carousel-item">
-       <img src="img/df3.png"  alt="Project 3" onclick="openPopup('popup3')" style="cursor: pointer; margin-right: 20px;">
+       <img src="media/df3.png"  alt="Drone Photography" onclick="openPopup('work-popup3')" style="cursor: pointer; margin-right: 20px;">
        <div class="overlay-text">Drone Photography</div>
       </div>
       <div class="carousel-item">
-       <img src="img/tutor2.jpeg" alt="Project 3">
+       <img src="media/tutor2.jpeg" alt="Tutoring" onclick="openPopup('work-popup4')" style="cursor: pointer; margin-right: 20px;">
        <div class="overlay-text">Tutoring</div>
       </div>
       <div class="carousel-item">
-       <img src="img/ls2.jpeg"  alt="Project 3">
+       <img src="media/ls2.jpeg"  alt="Project 3" onclick="openPopup('work-popup5')" style="cursor: pointer; margin-right: 20px;">
        <div class="overlay-text">Landscaping</div>
       </div>
      </div>
@@ -81,23 +65,23 @@
     <div class="carousel">
      <div class="carousel-inner">
       <div class="carousel-item">
-       <img src="img/thesis1.jpeg" alt="RL for Insulin Dosing" onclick="openPopup('popup1')" style="cursor: pointer; margin-right: 20px;">
+       <img src="media/thesis.png" alt="RL for Insulin Dosing" onclick="openPopup('project-popup1')" style="cursor: pointer; margin-right: 20px;">
        <div class="overlay-text">Thesis: RL Applications to Diabetes </div>
       </div>
       <div class="carousel-item">
-       <img src="img/bci2.jpeg" alt="RL for Insulin Dosing" onclick="openPopup('popup1')" style="cursor: pointer; margin-right: 20px;">
+       <img src="media/bci2.jpeg" alt="RL for Insulin Dosing" onclick="openPopup('project-popup2')" style="cursor: pointer; margin-right: 20px;">
        <div class="overlay-text">Brain Computer Interface </div>
       </div>
       <div class="carousel-item">
-       <img src="img/relectric.png" alt="RL for Insulin Dosing" onclick="openPopup('popup1')" style="cursor: pointer; margin-right: 20px;">
+       <img src="media/relectric.png" alt="EV Go Kart Build" onclick="openPopup('project-popup3')" style="cursor: pointer; margin-right: 20px;">
        <div class="overlay-text">EV Go Kart Rebuild </div>
       </div>
       <div class="carousel-item">
-       <img src="img/eyetrack.jpeg" alt="Eye tracking webcam ML" onclick="openPopup('popup1')" style="cursor: pointer; margin-right: 20px;">
-       <div class="overlay-text">Eye tracking ML Model </div>
+       <img src="media/eyetrack.jpeg" alt="Eye tracking webcam ML" onclick="openPopup('project-popup1')" style="cursor: pointer; margin-right: 20px;">
+       <div class="overlay-text">Eye Tracking CNN</div>
       </div>
       <div class="carousel-item">
-       <img src="img/placeholder.jpg"  alt="Project 3">
+       <img src="media/placeholder.jpg"  alt="Project 3">
       </div>
      </div>
    </section>
@@ -106,6 +90,90 @@
    </footer>
     </div>
 
+    <div class="popup-container" id="work-popup1">
+     <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('work-popup1')">&times;</span>
+      <h2>Full Stack Dev</h2>
+      <p>RecessD is a startup focused on minimizing consumption of commercial buildings.</p>
+      <p>My work focuses on implementing closed loop RL minimizing energy consumption of industrial IoT systems. HVAC, boiler, and irrigation systems provide unique opportunity for savings if properly controlled. </p>
+     </div>
+    </div>
+
+    <div class="popup-container" id="work-popup2">
+     <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('work-popup2')">&times</span>
+      <h2>Mech Eng. Intership</h2>
+      <p>TLDR: Designed assembly line components for aerospace-grade carbon fiber parts</p>
+      <p>Internship at Formula Solutions Inc. PLC Programming for assembly line components providing 1.8x reduction in production time for a given part. Designed 3D printed fixtures for pneumatic shears, drill press. Supervised installation of equipment on the factory floor.</p>
+     </div>
+    </div>
+
+    <div class="popup-container" id="work-popup3">
+     <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('work-popup3')">&times</span>
+      <h2>Drone Photography Freelance</h2>
+      <p>Freelance work capturing photo/video for residential and commercial clients. Documenting renovations, real estate listings, and personal showcases. Creative direction in filming/editing process. Project management and outreach to clients.
+      </p>
+     </div>
+    </div>
+
+    <div class="popup-container" id="work-popup4">
+     <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('work-popup4')">&times</span>
+      <h2>Tutoring Freelance</h2>
+      <p>Tutoring services for unviersity math/physics coursework.
+      Operating through Queen's Eng Soc. and freelance work.
+      <p>Uni Subjects: Calculus, Lin Alg., Fluid/Solid-Dynamics.</p>
+      <p>HS Subjects: Calc, Functions, Data Management, Physics.</p>
+     </div>
+    </div>
+
+    <div class="popup-container" id="work-popup5">
+     <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('work-popup5')">&times</span>
+      <h2>Running Landscaping Crews</h2>
+      <p>Managed crews of 4-5 members to provide landscape-construction maintenance services during the summer.
+     </div>
+    </div>
+
+    <div class="popup-container" id="project-popup1">
+     <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('project-popup1')">&times</span>
+      <h2>Undergrad Thesis</h2>
+      <p> My undergraduate thesis dissertation for Mathematics and Engineering Program.
+      Simulated glucose-insulin interraction using non-linear dynamic modeling.
+      Applied state-space analysis to Q-Learning in simulated environment.
+      Awarded Keyser Prize for outstanding thesis.
+      </p>
+      <a href="/media/Thesis.pdf" download="Thesis-DM.pdf"><p>Download the PDF<p/></a>
+     </div>
+    </div>
+
+    <div class="popup-container" id="project-popup2">
+     <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('project-popup2')">&times</span>
+      <h2>Brain Computer Interface</h2>
+      <p> Developed a BCI to allow hands-free binary control of a video game via blinking.
+Applied signal processing and data smoothing techniques to EEG signals.
+Tested a variety of machine learning architectures for classification.
+SVM achieved CV accuracy of 94.4% for blink detection with an F1 score of 96.3%.
+      </p>
+      <a href="/media/BCI.pdf" download="BCI.pdf"><p>Download the PDF<p/></a>
+     </div>
+    </div>
+
+
+    <div class="popup-container" id="project-popup3">
+     <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('project-popup3')">&times</span>
+      <h2>HVAC Proj. Manager</h2>
+      <p> Led team designing battery enclosures/active cooling system for electric go kart.
+Analyzed CAD models using flow/temperature simulations in SOLIDWORKS.
+Modeled and fabricated enclosures using sheet metal brake.
+Provided bend/weld drawings to machinists.
+<p/>
+     </div>
+    </div>
 
     <script src="script.js"></script>
  </body>
@@ -119,3 +187,4 @@
   document.getElementById(popupId).style.display = "none";
  }
 </script>
+
