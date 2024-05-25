@@ -10,12 +10,20 @@ body {
 }
 
 header {
-
+ margin: 12px;
  height: calc(33vh - 8px);
  display: flex;
  flex-direction: column;
  align-items: center;
  justify-content:center;
+}
+
+.icons {
+ align-items: row;
+}
+
+.icon {
+ padding: 0px 12px;
 }
 
 p {
@@ -31,13 +39,14 @@ h2 {
  margin-top: 0px;
  margin-bottom: 12px;
 }
+
+a { color: black; }
+
 .container {
  width: 90%;
- max-width: 900px; 
+ max-width: 768px; 
  margin: 0 auto;
 }
-
-a { text-decoration: none; color: black; }
 
 .header-controls button {
  background: none;
@@ -53,25 +62,35 @@ a { text-decoration: none; color: black; }
  color: #000000;
 }
 
+.header-controls {
+ display: flex;
+ align-items: center;
+ flex-direction: row;
+}
+
 .carousel {
  display: flex;
  justify-content: left;
  align-items: center;
  overflow: hidden;
  margin-bottom: 24px;
-}
-.icons {
- align-items: row;
-}
-
-.icon {
- padding: 0px 12px;
+ overflow-x: auto; 
+ overflow-y: hidden; /* Hide vertical scrollbar */
+ white-space: nowrap; /* Prevent items from wrapping */
+ -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
 }
 
-.header-controls {
+.carousel-inner {
+ align-items: left;
+ transition: transform 0.5s ease-in-out;
  display: flex;
- align-items: center;
- flex-direction: row;
+ justify-content: left;
+ margin-bottom: 24px;
+ -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+.carousel::-webkit-scrollbar {
+ display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
 }
 
 .carousel-controls {
@@ -80,16 +99,11 @@ a { text-decoration: none; color: black; }
  margin-bottom: 10px;
 }
 
-.carousel-inner {
- display: flex;
- align-items: left;
- transition: transform 0.5s ease-in-out;
-}
-
 .carousel-item {
  flex: 0 0 auto;
- width: calc(100% / 3);
+ width: calc(100vw / 3);
  min-width: 100px;
+ max-width: 256px;
  box-sizing: border-box;
  padding-right: 10px;
  position: relative;
@@ -120,7 +134,8 @@ a { text-decoration: none; color: black; }
  position: fixed;
  top: 0;
  left: 0;
- width: 100%;
+ padding: 0px 20px;
+ width: calc(100% - 40px);
  height: 100%;
  background-color: rgba(0, 0, 0, 0.5);
  justify-content: center;
@@ -129,7 +144,7 @@ a { text-decoration: none; color: black; }
 }
 
 .popup-content {
- width: 450px;
+ max-width: 450px;
  background-color: #fff;
  padding: 0 20px;
  border-radius: 5px;

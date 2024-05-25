@@ -13,9 +13,9 @@
   <div class="container">
    <header>
     <h1>dnlmrtn</h1>
-    <p> build something, learn something </p>
+    <p align="center"> build something, learn something </p>
     <div class="icons"> 
-     <a href="https://github.com/dnlmrtn" target="_blank">
+     <a href="https://github.com/dnlmrtn" style="text-decoration: none;" target="_blank">
       <i class="fa fa-github icon"  style="font-size:24px"></i>
      </a>
      <a href="https://linkedin.com/in/daniel-martin-0787" target="_blank">
@@ -36,15 +36,15 @@
      <div class="carousel-inner">
       <div class="carousel-item">
        <img src="media/iot5.png" alt="Internet of Things" onclick="openPopup('work-popup1')" style="cursor: pointer; margin-right: 20px;">
-       <div class="overlay-text">Internet of Things</div>
+       <div class="overlay-text">IoT</div>
       </div>
       <div class="carousel-item">
        <img src="media/cf.jpg"  alt="Composite Manufacturing" onclick="openPopup('work-popup2')" style="cursor: pointer; margin-right: 20px;">
-       <div class="overlay-text">Composite Manufacturing</div>
+       <div class="overlay-text">Composites</div>
       </div>
       <div class="carousel-item">
        <img src="media/df3.png"  alt="Drone Photography" onclick="openPopup('work-popup3')" style="cursor: pointer; margin-right: 20px;">
-       <div class="overlay-text">Drone Photography</div>
+       <div class="overlay-text">Drones</div>
       </div>
       <div class="carousel-item">
        <img src="media/tutor2.jpeg" alt="Tutoring" onclick="openPopup('work-popup4')" style="cursor: pointer; margin-right: 20px;">
@@ -66,28 +66,22 @@
      <div class="carousel-inner">
       <div class="carousel-item">
        <img src="media/thesis.png" alt="RL for Insulin Dosing" onclick="openPopup('project-popup1')" style="cursor: pointer; margin-right: 20px;">
-       <div class="overlay-text">Thesis: RL Applications to Diabetes </div>
+       <div class="overlay-text">Thesis </div>
       </div>
       <div class="carousel-item">
        <img src="media/bci2.jpeg" alt="RL for Insulin Dosing" onclick="openPopup('project-popup2')" style="cursor: pointer; margin-right: 20px;">
-       <div class="overlay-text">Brain Computer Interface </div>
+       <div class="overlay-text">BCI </div>
       </div>
       <div class="carousel-item">
        <img src="media/relectric.png" alt="EV Go Kart Build" onclick="openPopup('project-popup3')" style="cursor: pointer; margin-right: 20px;">
-       <div class="overlay-text">EV Go Kart Rebuild </div>
+       <div class="overlay-text">EV Rebuilds</div>
       </div>
       <div class="carousel-item">
-       <img src="media/eyetrack.jpeg" alt="Eye tracking webcam ML" onclick="openPopup('project-popup1')" style="cursor: pointer; margin-right: 20px;">
-       <div class="overlay-text">Eye Tracking CNN</div>
-      </div>
-      <div class="carousel-item">
-       <img src="media/placeholder.jpg"  alt="Project 3">
+       <img src="media/eyetrack.jpeg" alt="Eye tracking webcam ML" onclick="openPopup('project-popup4')" style="cursor: pointer; margin-right: 20px;">
+       <div class="overlay-text">Eye Tracking</div>
       </div>
      </div>
    </section>
-   <footer>
-    <p>https://github.com/dnlmrtn/folio</p>
-   </footer>
     </div>
 
     <div class="popup-container" id="work-popup1">
@@ -96,6 +90,7 @@
       <h2>Full Stack Dev</h2>
       <p>RecessD is a startup focused on minimizing consumption of commercial buildings.</p>
       <p>My work focuses on implementing closed loop RL minimizing energy consumption of industrial IoT systems. HVAC, boiler, and irrigation systems provide unique opportunity for savings if properly controlled. </p>
+      <a href="https://www.recessd.com/" target="_blank"><p>recessd.com<p/></a>
      </div>
     </div>
 
@@ -103,7 +98,6 @@
      <div class="popup-content">
       <span class="popup-close" onclick="closePopup('work-popup2')">&times</span>
       <h2>Mech Eng. Intership</h2>
-      <p>TLDR: Designed assembly line components for aerospace-grade carbon fiber parts</p>
       <p>Internship at Formula Solutions Inc. PLC Programming for assembly line components providing 1.8x reduction in production time for a given part. Designed 3D printed fixtures for pneumatic shears, drill press. Supervised installation of equipment on the factory floor.</p>
      </div>
     </div>
@@ -154,27 +148,36 @@
       <span class="popup-close" onclick="closePopup('project-popup2')">&times</span>
       <h2>Brain Computer Interface</h2>
       <p> Developed a BCI to allow hands-free binary control of a video game via blinking.
-Applied signal processing and data smoothing techniques to EEG signals.
-Tested a variety of machine learning architectures for classification.
-SVM achieved CV accuracy of 94.4% for blink detection with an F1 score of 96.3%.
+      Applied signal processing and data smoothing techniques to EEG signals.
+      Tested a variety of machine learning architectures for classification.
+      SVM achieved CV accuracy of 94.4% for blink detection with an F1 score of 96.3%.
       </p>
       <a href="/media/BCI.pdf" download="BCI.pdf"><p>Download the PDF<p/></a>
      </div>
     </div>
-
 
     <div class="popup-container" id="project-popup3">
      <div class="popup-content">
       <span class="popup-close" onclick="closePopup('project-popup3')">&times</span>
       <h2>HVAC Proj. Manager</h2>
       <p> Led team designing battery enclosures/active cooling system for electric go kart.
-Analyzed CAD models using flow/temperature simulations in SOLIDWORKS.
-Modeled and fabricated enclosures using sheet metal brake.
-Provided bend/weld drawings to machinists.
-<p/>
+      Analyzed CAD models using flow/temperature simulations in SOLIDWORKS.
+      Modeled and fabricated enclosures using sheet metal brake.
+      Provided bend/weld drawings to machinists.
+      <p/>
+      <a href="https://www.queensrelectric.ca/" target="_blank"><p>queensrelectric.ca<p/></a>
      </div>
     </div>
 
+    <div class="popup-container" id="project-popup4">
+     <div class="popup-content">
+      <span class="popup-close" onclick="closePopup('project-popup4')">&times</span>
+      <h2>Scroll with your eyes</h2>
+      <p> A ConvNet mapping eye movements to cursor positions allows users with a webcam to toggle page scrolling by looking at the top/bottom of the screen. We collected ~4000 training images of users looking at a mouse locations. After some preprocessing, we trained a CNN to map live video input of eyes to a location output, which can be used to trigger various actions. 
+      <p/>
+      <a href="https://github.com/dnlmrtn/Retna" target="_blank"><p>Repo here<p/></a>
+     </div>
+    </div>
     <script src="script.js"></script>
  </body>
 </html>
