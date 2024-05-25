@@ -1,4 +1,4 @@
-# dnlmrtn.com site Repository
+# dnlmrtn.com 
 
 ![Site Photo](media/site-photo.png)
 
@@ -8,28 +8,26 @@ This project is licensed under a [Public Domain License](LICENSE). AKA steal as 
 
 ## Description
 
-Source code for my personal site. HTML/JS/CSS. Feel free to steal as you please.
+Source code for my personal site. Not a resume.
 
 ## Midjourney Prompts
 
-All photos created by midjourney v6. Some prompts I used were
-- space age image of <describe scenario>
+Photos created by midjourney v6. Some prompts I used were
+- space age image of x (inspired by x.com/radshaan)
 - jean giraud moebius
 - negative space
 - --sref _link-to-image-of-film-light-leak_
-inspired by x.com/radshaan
 
-## How to Use
-
-1. 
+## How to
+Clone
 ```bash
-https://github.com/dnlmrtn/folio.git
+git clone https://github.com/dnlmrtn/folio.git
 ```
-2. 
+Go to repo
 ```bash
 cd /path/to/directory/
 ```
-3. 
+Run local server
 ```bash
 python3 -m http.server 8000
 ```
